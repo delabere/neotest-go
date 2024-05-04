@@ -24,7 +24,7 @@ end
 ---@type neotest.Adapter
 local adapter = { name = "neotest-go" }
 
-adapter.root = lib.files.match_root_pattern("go.mod", "go.sum")
+adapter.root = lib.files.match_root_pattern("main.go", "README.md", "go.mod", "go.sum")
 
 function adapter.is_test_file(file_path)
   if not vim.endswith(file_path, ".go") then
