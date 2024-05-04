@@ -98,7 +98,7 @@ end
 ---@param start_file string
 ---@return string?
 function utils.get_go_root(start_file)
-  return lib.files.match_root_pattern("go.mod")(start_file)
+  return lib.files.match_root_pattern("main.go", "README.md", "go.mod", "go.sum")(start_file)
 end
 
 --- gets the go module name
